@@ -1,0 +1,71 @@
+:root {
+    --main_layout_width: 100%;
+    --main_layout_max_width: 620px;
+}
+
+@media screen and (min-width: 620px) {
+    .full-screen {
+        margin-left: calc((-100vw / 2) + (var(--main_layout_max_width) / 2));
+        margin-right: calc((-100vw / 2) + (var(--main_layout_max_width) / 2));
+    }
+}
+
+.wrapper {
+    justify-content: center;
+}
+
+.main-layout {
+    width: var(--main_layout_width);
+    max-width: var(--main_layout_max_width);
+    margin: 0 auto;
+}
+
+.kit-header .vkuiFixedLayout__in {
+    display: flex;
+    justify-content: center;
+    background: var(--header_background,var(--vkui--color_background_content));
+}
+
+.kit-header .vkuiPanelHeader__in {
+    width: var(--main_layout_width);
+    max-width: var(--main_layout_max_width);
+}
+
+.kit-header .vkuiSeparator {
+    color: transparent;
+}
+
+.kit-header .vkuiPanelHeader__content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.LogoLink {
+    display: flex;
+}
+
+.card-list-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: var(--vkui--color_text_primary);
+    padding: var(--vkui--size_popup_base_padding--compact);
+    min-height: 98px;
+}
+
+.card-list-item:hover {
+    transition: background-color 1ms;
+    background-color: var(--background_hover);
+}
+
+.gradient-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+}
