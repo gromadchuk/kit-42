@@ -61,7 +61,7 @@ export class App extends Component {
             'home',
         ];
 
-        this.allowMetodsHash = getAllMethods().map(method => method.id);
+        this.allowMethodsHash = getAllMethods().map(method => method.id);
 
         window.userId = 0; // for cache
 
@@ -104,7 +104,7 @@ export class App extends Component {
 
             this.setState({ user });
 
-            if (this.allowMetodsHash.includes(this.initHash)) {
+            if (this.allowMethodsHash.includes(this.initHash)) {
                 const method = getAllMethods().find(method => method.id === this.initHash);
 
                 this.openMethod(method);
